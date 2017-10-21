@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/lib/app.js"></script>
+        
+    </head>
+    <body>
+    <body ng-app="quizApp">
+        <div ng-controller="quizController">
+         <div ng-show="welcomeScreen">
+             <label>Enter Your Name:</label>
+             <input type="text" id="name" ng-model="quizzer">
+             <button ng-click="startQuiz()">Start Quiz</button>
+            </div>
+            <div ng-show="quizScreen">
+            <b>hello{{quizzer}}</b>
+            </div>
+        
+        
+        </div>
+       
+        
+    </body>
+    
+    
+
+
+
+</html>

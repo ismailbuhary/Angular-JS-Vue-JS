@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="scripts/libs/angular.js"></script>
+	<script src="scripts/app.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	
+</head>
+<body ng-app="demoApp">
+	<div ng-controller="demoControl">
+		<table class="table table-striped">
+			<tr><th>Id</th><th>Name</th><th>Age</th><th>City</th><th>Actions</th></tr>
+			<tr ng-repeat="customer in customers | orderBy:'id'">
+				<td>{{customer.id}}</td><td>{{customer.name | capital}}</td><td>{{customer.age}}</td><td>{{customer.city}}</td>
+				<td>
+					<button class="glyphicon glyphicon-trash" ng-click="deleteCustomer(customer.id)"></button>	
+				</td>
+			</tr>
+
+		</table>
+	</div>
+</body>
+</html>
+
+
